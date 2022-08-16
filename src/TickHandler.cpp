@@ -103,6 +103,8 @@ void TickHandler::setup()
  * First a timer with the same interval is looked up. If none found, a free one is
  * used. Then a free TickObserver slot (of max CFG_MAX_TICK_OBSERVERS) is looked up. If all went
  * well, the timer is configured and (re)started.
+ * 
+ * Unit seems to be us!
  */
 void TickHandler::attach(TickObserver* observer, uint32_t interval) {
     timer = findTimer(interval);

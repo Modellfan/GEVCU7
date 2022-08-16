@@ -656,7 +656,7 @@ void CanHandler::loop()
  *
  *  \param observer - the observer object to register (must implement CanObserver class)
  *  \param id - the id of the can frame to listen to
- *  \param mask - the mask to be applied to the frames
+ *  \param mask - the mask to be applied to the frames. The mask is binary. All zeros can get through.
  *  \param extended - set if extended frames must be supported
  */
 void CanHandler::attach(CanObserver* observer, uint32_t id, uint32_t mask, bool extended)
